@@ -41,7 +41,8 @@ jobs:
     needs: test
     runs-on: ubuntu-22.04
     steps:
-      - name: list env env_variables
+      - name: list env variables
         run: printenv
-      
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}"
 
